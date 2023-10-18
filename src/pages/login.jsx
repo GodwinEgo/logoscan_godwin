@@ -5,7 +5,7 @@ const Login = () => {
   const navigate = useNavigate(); // Moved this outside of handleLoginClick
 
   const handleLoginClick = () => {
-    navigate("/scanlogo"); // Use navigate directly here
+    navigate("/admin_upload"); // Use navigate directly here
   };
 
   const onSubmit = (e) => {

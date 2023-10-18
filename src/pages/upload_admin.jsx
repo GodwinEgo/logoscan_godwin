@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Webcam from "react-webcam";
 import "./scanlogo.css";
 import { useSelector, useDispatch } from "react-redux";
+import Navbar from "../components/navbar";
 const UploadAdmin = () => {
   const url = import.meta.env.VITE_BACKEND_API_URL;
   const webcamRef = useRef(null);
@@ -64,6 +65,7 @@ const UploadAdmin = () => {
   };
   return (
     <>
+      <Navbar />
       <div className="container mt-3">
         {message && (
           <div className="border rounded alert d-flex justify-content-between">

@@ -13,6 +13,7 @@ import chunkReducer from "./slices/chunkSLice.js";
 import UploadAdmin from "./pages/upload_admin";
 import ReviewsPage from "./pages/ReviewsPage";
 import AddUserReview from "./pages/AdddUserReview";
+import UserAdmin from "./pages/UserAdmin.jsx";
 
 const store = configureStore({
   reducer: {
@@ -33,6 +34,9 @@ const routes = createBrowserRouter([
   {
     path: "scanlogo",
     element: <ScanLogo />,
+  },{
+  path:'user_admin',
+    element:<UserAdmin/>
   },
   {
     path: "admin_upload",

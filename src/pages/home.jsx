@@ -12,7 +12,7 @@ const Home = () => {
         style={{ height: "92.5vh" }}
       >
         <div className="w-100 h-100 d-flex justify-content-center align-items-center">
-          <Link to="login">
+          <Link to="user_admin">
             <img
               src={uxlive}
               alt="ux-live"
