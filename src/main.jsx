@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+// import App from "./App";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { configureStore } from "@reduxjs/toolkit";
@@ -24,33 +24,27 @@ const store = configureStore({
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "scanlogo",
-        element: <ScanLogo />,
-      },
-      {
-        path: "admin_upload",
-        element: <UploadAdmin />,
-      },
-      {
-        path: "reviews/:id",
-        element: <ReviewsPage />,
-      },
-      {
-        path: "add_review/:id",
-        element: <AddUserReview />,
-      },
-    ],
+    element: <Home />,
+  },
+  {
+    path: "login",
+    element: <Login />,
+  },
+  {
+    path: "scanlogo",
+    element: <ScanLogo />,
+  },
+  {
+    path: "admin_upload",
+    element: <UploadAdmin />,
+  },
+  {
+    path: "reviews/:id",
+    element: <ReviewsPage />,
+  },
+  {
+    path: "add_review/:id",
+    element: <AddUserReview />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

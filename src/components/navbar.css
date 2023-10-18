@@ -1,0 +1,7 @@
+.navbar-with-shadow {
+  box-shadow: 4px 0px 0px gray;
+}
+
+.navbar {
+  box-shadow: none;
+}

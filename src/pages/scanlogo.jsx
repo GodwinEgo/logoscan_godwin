@@ -9,6 +9,7 @@ import { modify } from "../slices/resultSlice";
 import { modifyChunks } from "../slices/chunkSLice";
 import { Link } from "react-router-dom";
 import Dropdown from "../components/dropdown";
+import Navbar from "../components/navbar";
 const ScanLogo = () => {
   const url = import.meta.env.VITE_BACKEND_API_URL;
   const webcamRef = useRef(null);
@@ -75,6 +76,7 @@ const ScanLogo = () => {
 
   return (
     <>
+      <Navbar hasShadow={true} />
       <div className="bg-danger">
         <ul className="d-flex justify-content-evenly">
           <li className="col-4">
