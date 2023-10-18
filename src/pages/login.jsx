@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
+import Navbar from "../components/navbar";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/navbar.jsx";
+import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import the eye icons
 
 const Login = () => {
   const url = import.meta.env.VITE_BACKEND_API_URL;
@@ -8,6 +9,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(formInput);
   const [error, setError] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -56,15 +58,27 @@ const Login = () => {
             />
           </div>
           <div className="py-3 col-12">
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              className="form-control"
-              value={user.password}
-              onChange={(e) => setUser({ ...user, password: e.target.value })}
-            />
+            <div className="input-group">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                id="password"
+                placeholder="Password"
+                className="form-control"
+                value={user.password}
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
+              />
+              <span className="input-group-text">
+                <button
+                  type="button"
+                  className="btn btn-danger"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}{" "}
+                  {/* Use Font Awesome eye icons */}
+                </button>
+              </span>
+            </div>
           </div>
           <div className="py-3 col-12">
             <input
