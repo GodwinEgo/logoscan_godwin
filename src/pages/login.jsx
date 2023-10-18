@@ -23,7 +23,7 @@ const Login = () => {
       navigate("/admin_upload");
     } else {
       setUser(formInput);
-      setError("Wrong credentials");
+      setError("Invalid credentials!! Please use the correct ones");
       setTimeout(() => {
         setError(null);
       }, 5000);
