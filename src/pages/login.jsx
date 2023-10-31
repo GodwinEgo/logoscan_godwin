@@ -16,7 +16,7 @@ const Login = () => {
     let formData = new FormData();
     formData.append("username", user.username);
     formData.append("password", user.password);
-    let res = await fetch(`${url}upload-logo/admin/login/`, {
+    let res = await fetch(`${url}/login/`, {
       method: "POST",
       body: formData,
     });
